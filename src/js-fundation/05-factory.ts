@@ -1,18 +1,22 @@
-const {getAge, randomUUID} = require('../plugins')
+interface BuildMakerPersonOptions {
+    uuid: () => string,
+    getAge: (cumple: number | string | Date) => number
+}
 
-const buildMakePerson = ({randomUUID,getAge}) => {
-    return  ({name, cumple}) =>{
+interface PersonOptions {
+    name: string,
+    cumple: number | string | Date
+}
+
+export const buildMakePerson = ({getAge}: BuildMakerPersonOptions) => {
+    return  ({name, cumple}: PersonOptions) =>{
         return {
-            id: randomUUID,
             name: name,
             cumple: cumple,
             age: getAge(cumple)
         }
     }
 }
-
-module.exports = { buildMakePerson, getAge, randomUUID }
-
 
 
 // Esto es lo que iría en App.js
