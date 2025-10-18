@@ -1,28 +1,27 @@
 //* Usando Axios como patron adaptador
-/*const { httpAx } = require('../plugins')
+import { httpAxios } from '../plugins';
 
-const getPokemonById = async (id) => {
+export const getPokemonNameById = async (id: number):Promise<string> => {
     const url = `https://pokeapi.co/api/v2/pokemon/${id}`
-
-    const pokemon = await httpAx.get(url);
-
+    const pokemon = await httpAxios.get(url);
+   
     return pokemon.name;
-}*/
+}
+
+// import { promises } from "dns";
 
 
 
 //* Usando Axios
-const axios = require('axios');
-
-
-const getPokemonById = async (id) => {
+/*import axios from 'axios';
+export const getPokemonNameById = async (id:number):Promise<string> => {
     // Make a request for a user with a given ID
     try {
         axios({
-        method: 'get',
-        url: `https://pokeapi.co/api/v2/pokemon/${id}`,
-    })
-        .then( (response) => {
+            method: 'get',
+            url: `https://pokeapi.co/api/v2/pokemon/${id}`,
+        })
+        .then((response) => {
             // handle success
             const pokemon = response.data
             console.log(pokemon.name); 
@@ -30,16 +29,16 @@ const getPokemonById = async (id) => {
     } catch (error) {
         console.error(error);
     }
-}
+}*/
 
 
 
 
 
 //* Usando un patron adaptador en la carpeta plugins
-/*const { http } = require('../plugins')
+/*import { httpClient as http} from '../plugins';
 
-const getPokemonById = async (id) => {
+export const getPokemonById = async (id:number):Promise<string> => {
     const url = `https://pokeapi.co/api/v2/pokemon/${id}`
 
     const pokemon = await http.get(url);
@@ -51,19 +50,15 @@ const getPokemonById = async (id) => {
 
 
 //* Forma normal
-/* const getPokemonById = async (id) => {
+/*export const getPokemonById = async (id: number):Promise<string>  => {
     const url = `https://pokeapi.co/api/v2/pokemon/${id}`
 
     const response = await fetch(url)
     const pokemon = await response.json();
     
     return pokemon.name
-}
-*/
+}*/
 
-module.exports = {
-    getPokemonById
-}
 
 
 
