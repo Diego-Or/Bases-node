@@ -3,3 +3,5 @@
 
 const {NODE} = process.env
 console.log(NODE);
+
+export const characters: string[] = ['Flash', 'Superman', 'Batman', 'Aquaman']
