@@ -4,7 +4,7 @@
   "description": "Esta es mi primera aplicación de Node",
   "license": "ISC",
   "author": "Diego Ortiz",
-  "type": "module",
+  "type": "commonjs",
   "main": "src/app.js",
   "scripts": {
     "test": "jest",

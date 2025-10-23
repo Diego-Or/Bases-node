@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.httpClient = exports.httpAxios = exports.buildLogger = exports.uuid = exports.getAge = void 0;
+var get_age_plugin_1 = require("./get-age.plugin");
+Object.defineProperty(exports, "getAge", { enumerable: true, get: function () { return get_age_plugin_1.getAge; } });
+var get_uuid_plugin_1 = require("./get-uuid.plugin");
+Object.defineProperty(exports, "uuid", { enumerable: true, get: function () { return get_uuid_plugin_1.randomUUID; } });
+var logger_plugin_1 = require("./logger.plugin");
+Object.defineProperty(exports, "buildLogger", { enumerable: true, get: function () { return logger_plugin_1.buildLogger; } });
+var http_axios_plugin_1 = require("./http-axios-plugin");
+Object.defineProperty(exports, "httpAxios", { enumerable: true, get: function () { return http_axios_plugin_1.httpAxiosPlugin; } });
+var http_client_plugin_1 = require("./http-client-plugin");
+Object.defineProperty(exports, "httpClient", { enumerable: true, get: function () { return http_client_plugin_1.httpClientPlugin; } });
