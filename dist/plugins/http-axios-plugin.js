@@ -7,7 +7,13 @@ exports.httpAxiosPlugin = {
         const { data } = await axios_1.default.get(url);
         return data;
     },
-    post: async (url, body) => { },
-    pull: async (url, body) => { },
-    delete: async (url) => { },
+    post: async (url, body) => {
+        throw new Error('Function not implemented.');
+    },
+    pull: async (url, body) => {
+        throw new Error('Function not implemented.');
+    },
+    delete: async (url) => {
+        throw new Error('Function not implemented.');
+    },
 };
