@@ -2,10 +2,15 @@
 import { httpAxios } from '../plugins';
 
 export const getPokemonNameById = async (id: number):Promise<string> => {
-    const url = `https://pokeapi.co/api/v2/pokemon/${id}`
-    const pokemon = await httpAxios.get(url);
-   
-    return pokemon.name;
+    try {
+        const url = `https://pokeapi.co/api/v2/pokemon/${id}`
+        const pokemon = await httpAxios.get(url);
+    
+        return pokemon.name;
+    } catch (error) {
+        throw `Pokémon no encontrado con el id ${id}`;
+    }
+    
 }
 
 // import { promises } from "dns";
