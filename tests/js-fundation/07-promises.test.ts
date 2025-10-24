@@ -1,10 +1,9 @@
-
-import { error } from 'console';
 import { getPokemonNameById } from '../../src/js-fundation/07-promises';
 describe('Test in the js-fundation/07-promises.ts',()=>{
     test('getPokemonNameByIdById should return a Pokemon',async()=>{
         const pokemonId = 1;
-        
+        const pokemonName= await getPokemonNameById(pokemonId);
+        expect(pokemonName).toBe(`bulbasaur`);
     })
 
     test('getPokemonNameByIdById should return an error',async()=>{

@@ -1,11 +1,11 @@
 interface BuildMakerPersonOptions {
     uuid: () => string,
-    getAge: (cumple: number | string | Date) => number
+    getAge: (cumple:string) => number
 }
 
 interface PersonOptions {
     name: string,
-    cumple: number | string | Date
+    cumple: string
 }
 
 export const buildMakePerson = ({getAge}: BuildMakerPersonOptions) => {

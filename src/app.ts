@@ -7,7 +7,6 @@ console.log(emailTemplate);
 
 // ?Numero Random 
 import { uuid } from "./plugins/";
-const random = uuid;
 console.log('Numero Random: ',uuid);
 
 

@@ -3,7 +3,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const _01_template_1 = require("./js-fundation/01-template");
 console.log(_01_template_1.emailTemplate);
 const plugins_1 = require("./plugins/");
-const random = plugins_1.uuid;
 console.log('Numero Random: ', plugins_1.uuid);
 const plugins_2 = require("./plugins/");
 const FechaNacimiento = '1996-11-14';

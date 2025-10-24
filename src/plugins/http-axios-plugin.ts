@@ -7,8 +7,14 @@ export const httpAxiosPlugin = {
         return data
     },
 
-    post: async(url: string, body: any) => {},
-    pull: async(url: string, body: any) => {},
-    delete: async(url: string) => {},
+    post: async(url: string, body: any) => {
+        throw new Error('Function not implemented.');
+    },
+    pull: async(url: string, body: any) => {
+        throw new Error('Function not implemented.');
+    },
+    delete: async(url: string) => {
+        throw new Error('Function not implemented.');
+    },
 };
 
